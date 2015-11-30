@@ -1,0 +1,25 @@
+<div id="container">
+
+    <section id="dumpList" ng-show="foundDump">
+        <ul id="link-list">
+            <li class="link-element" ng-repeat="link in links" >
+                <div class="linkView">
+                    <label class="link-text">
+                        <p>{{link.title}}</p>
+                        <a href="{{link.url}}" target="_blank" style="word-break: break-all">{{link.url}}</a>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="errorBox" ng-hide="foundDump">
+        <h1>Error</h1>
+    </section>
+
+    <footer id="dumpFooter" ng-show="foundDump">
+        <button ng-click="share()" class="btn btn-success btn-lg action-button" ng-show="links.length>0">Share</button>
+        <button ng-click="edit()" class="btn btn-success btn-lg action-button"  ng-show="links.length>0">Edit</button>
+
+    </footer>
+</div>

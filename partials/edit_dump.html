@@ -1,0 +1,33 @@
+<div id="container">
+    <header id="dumpHeader">
+        <form id="todo-form" ng-submit="addNewLink()" role="form">
+            <div style=" position: relative;">
+                <input id="new-link" placeholder="Paste or type link." ng-model="newLink" autofocus>
+                <span class="glyphicon glyphicon-remove" ng-click="newLink=''" ng-show="newLink"></span>
+            </div>
+        </form>
+    </header>
+
+    <section id="dumpList">
+        <ul id="link-list">
+            <li class="link-element" ng-repeat="link in links" >
+                <div class="linkView">
+                    <label class="link-text">
+                        <p>{{link.title}}</p>
+                        <a href="{{link.url}}" target="_blank" style="word-break: break-all">{{link.url}}</a>
+                    </label>
+
+                    <span class="glyphicon glyphicon-remove destroy" ng-click="removeLink($index)"></span>
+
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer id="dumpFooter">
+        <button ng-click="share()" class="btn btn-success btn-lg action-button" ng-show="links.length>0">Share</button>
+        <button ng-click="clear()" class="btn btn-danger btn-lg action-button"  ng-show="links.length>0">Clear</button>
+
+    </footer>
+
+</div>

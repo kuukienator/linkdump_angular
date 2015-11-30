@@ -1,0 +1,68 @@
+/*
+.link-element.ng-enter {
+    -webkit-transition:0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition:0.5s linear all;
+    transform: scale(0);
+}
+.link-element.ng-enter.ng-enter-active{
+    transform: scale(1);
+}
+
+.link-element.ng-move{
+
+}
+.link-element.ng-move.ng-move-active{
+
+}
+
+.link-element.ng-leave {
+    -webkit-animation:0.5s my_animation;
+    animation:0.5s my_animation;
+}
+@-webkit-keyframes my_animation {
+    from {  transform: scale(1); }
+    to {  transform: scale(0); }
+}
+*/
+
+
+.link-element.ng-enter {
+    -webkit-animation: fadeInUp 1s;
+    -moz-animation: fadeInUp 1s;
+    -ms-animation: fadeInUp 1s;
+    animation: fadeInUp 1s;
+}
+
+.link-element.ng-leave {
+    -webkit-animation: fadeOutDown 1s;
+    -moz-animation: fadeOutDown 1s;
+    -ms-animation: fadeOutDown 1s;
+    animation: fadeOutDown 1s;
+}
+
+/*
+.link-element.ng-enter{
+    -webkit-transition:0.5s linear all;
+    transform: scale(0)
+}
+.link-element.ng-enter.ng-enter-active{
+    transform: scale(1)
+}
+
+.link-element.ng-move{
+    -webkit-transition:0.5s linear all;
+    transform: scale(0)
+}
+.link-element.ng-enter.ng-move-active{
+    transform: scale(1)
+}
+
+.link-element.ng-leave{
+    -webkit-transition:0.5s linear all;
+    transform: scale(1)
+}
+.link-element.ng-enter.ng-leave-active{
+    transform: scale(0)
+}
+*/

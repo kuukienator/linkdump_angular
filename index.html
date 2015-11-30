@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html ng-app="dumpLinkApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--
+    <base href="/">
+    -->
+    <title>dump_link AngularJS</title>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
+
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <style>
+        body{
+            background-color: #f1f1f1;
+        }
+        #container{
+            width: 80%;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #dumpList {
+            width: 80%;
+            margin: 0 auto;
+            /*
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+            */
+        }
+        #errorBox {
+            width: 80%;
+            margin: 0 auto;
+        }
+        #dumpHeader{
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #logo{
+            font-family: 'Crete Round', serif;
+            font-size: 70px;
+            text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+            margin: 50px;
+            text-align: center;
+
+        }
+        #logo a{
+            text-decoration: none;
+            color: #000000;
+        }
+
+        #dumpFooter{
+            margin-top: 40px;
+            text-align: center;
+        }
+        #new-link{
+            width: 100%;
+            padding: 15px;
+            font-size: 1.5em;
+
+        }
+
+        #new-link{
+            color: #000000;
+            margin: 0 auto;
+            box-shadow: inset 0 1px 2px #eee;
+            border: 4px solid #000000;
+            background-color: rgba(241, 241, 241, 0.50);
+        }
+
+        #link-list li .destroy {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            margin: auto 0;
+            font-size: 20px;
+            color: #a80607;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+
+        #link-list li .destroy:hover {
+            -webkit-transform: scale(1.4);
+            -ms-transform: scale(1.4);
+            transform: scale(1.4);
+        }
+
+        #link-list li .destroy:after {
+            content: '';
+        }
+
+        #link-list li:hover .destroy {
+            display: block;
+        }
+        #link-list{
+            max-height: 100%;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .link-element{
+            position: relative;
+            box-shadow: 0 1px 2px rgba(0,0,0,.1);
+            padding: 10px;
+            background-color: #ffffff;
+            margin-bottom: 10px;
+
+        }
+
+        .link-text{
+            padding-right: 30px;
+        }
+        .link-text p{
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        .link-text a{
+            font-size: 0.9em;
+        }
+
+        #todo-form span{
+            position: absolute;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            top: 0;
+            right: 10px;
+            bottom: 0;
+            margin: auto 0;
+            font-size: 25px;
+        }
+
+        #todo-form span:hover{
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+    </style>
+
+    <script type="text/javascript" src="bower_components/angular/angular.min.js" ></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js" ></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js" ></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" ></script>
+
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <h1 id="logo"><a ng-controller="HeaderController" ng-href="{{homeUrl}}" ng-click="home()">link_dump</a></h1>
+    <div ng-view></div>
+
+</body>
+</html>
