@@ -1,3 +1,2 @@
-# linkdump_angular
-
+#Linkdump Angular
 Angualar Frontend for linkdump service
